@@ -62,10 +62,10 @@ section {
   background-color: var(--primary-cyan);
   color: #fff;
   padding: 1.5rem 2.5rem;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--primary-cyan-light);
 }
 
@@ -420,10 +420,19 @@ section {
 .footer-content-list li {
   color: var(--neutral-gray);
   margin: 1rem 0;
+  cursor: pointer;
+}
+
+.footer-content-list li:hover {
+  color: var(--primary-cyan);
 }
 
 .social-link {
   font-size: 3rem;
+}
+
+.social-link:hover {
+  color: var(--primary-cyan);
 }
 
 .social-link:not(:last-child) {
