@@ -1,6 +1,8 @@
 /* Basic reset */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +12,7 @@
 
 :root {
   --primary-cyan: hsl(180, 66%, 49%);
+  --primary-cyan-light: hsl(180, 55%, 78%);
   --primary-violet: hsl(257, 27%, 26%);
   --secondary-red: hsl(0, 87%, 67%);
   --neutral-light-gray: hsl(0, 10%, 94%);
@@ -59,6 +62,11 @@ section {
   background-color: var(--primary-cyan);
   color: #fff;
   padding: 1.5rem 2.5rem;
+  transition: background-color .5s;
+}
+
+.btn:hover{
+  background-color: var(--primary-cyan-light);
 }
 
 .btn-rounded {
@@ -157,7 +165,7 @@ section {
 }
 
 .nav-item:nth-child(4)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -206,7 +214,7 @@ section {
 }
 
 .link::after {
-  content: '';
+  content: "";
   top: 14rem;
   position: absolute;
   width: 100%;
@@ -226,10 +234,10 @@ section {
 }
 
 .main-link #input-link {
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   border: 3px solid transparent;
   border-radius: 5px;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .main-link input::placeholder {
@@ -274,7 +282,7 @@ section {
 }
 
 .title-url::after {
-  content: '';
+  content: "";
   bottom: 0;
   left: 0;
   position: absolute;
@@ -316,7 +324,7 @@ section {
 }
 
 .statistics-grid::after {
-  content: '';
+  content: "";
   top: 0;
   left: calc(50% - 0.5rem);
   position: absolute;
@@ -500,7 +508,6 @@ section {
     width: 70%;
   }
 
-
   /* link */
   .link::after {
     top: 12rem;
@@ -523,9 +530,9 @@ section {
     flex: 1;
   }
   .error {
-    content: '';
+    content: "";
     position: absolute;
-    bottom: .5rem;
+    bottom: 0.5rem;
   }
   .shorten-link {
     display: flex;
@@ -567,7 +574,7 @@ section {
     display: flex;
   }
   .statistics-grid::after {
-    content: '';
+    content: "";
     top: calc(50% - 0.5rem);
     left: 0;
     position: absolute;
@@ -598,8 +605,8 @@ section {
     background: url("./images/bg-boost-desktop.svg") right no-repeat;
     background-color: var(--primary-violet);
   }
-  .boost-text{
-    padding: 1.8rem 0; 
+  .boost-text {
+    padding: 1.8rem 0;
   }
   .boost h2 {
     font-size: 4rem;

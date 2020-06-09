@@ -52,8 +52,9 @@ function linkTemplate(linkData) {
   return `
     <div class="shorten-link">
       <h3 class="title-url">${url}</h3>
-      <a href="${shortLink}" class="title-link">${shortLink}</a>
-      <button id="btn-copy" class="btn btn-rectangle">Copy</button>
+      <a href="${shortLink}" class="title-link" id="${hashid}">${shortLink}</a>
+      <button id="btn-copy" class="btn btn-rectangle clipboard" 
+      data-clipboard-target="#${hashid}" data-clipboard-action="copy">Copy</button>
     </div>
   `;
 }
@@ -68,3 +69,17 @@ function loadLinks() {
     savedLinks = [];
   }
 }
+
+/* COPY TO CLIPBOARD */
+
+let clipboard = new ClipboardJS(".clipboard");
+
+clipboard.on("success", function (e) {
+  e.trigger.innerText = "Copied!";
+  e.trigger.style.backgroundColor = "hsl(255, 11%, 22%)";
+  e.clearSelection();
+});
+
+clipboard.on("error", function (e) {
+  console.log(e);
+});
